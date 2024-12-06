@@ -1,5 +1,0 @@
-gg.alert("FREE SCRIPT IS EXPIRED")
-gg.alert("Buy Paid Script With New Features And Solved Some features Problems")
-gg.alert("You can buy script for 20$ or 3 ex max account")
-TG = gg.alert("Link Will be Copied : https://t.me/ZLI_HACKS ")
-gg.copyText("https://t.me/ZLI_HACKS")
