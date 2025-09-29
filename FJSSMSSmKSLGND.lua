@@ -1,1 +1,0 @@
-gg.alert("Sorry But the script stopped working\nDue to The game Developers Itself have told me to delete it\n and i cant risk my channel and other for it")
