@@ -1,12 +1,232 @@
---[[
- .____                  ________ ___.    _____                           __                
- |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
- |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
- |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
- |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
-         \/          \/         \/    \/                \/     \/     \/                   
-          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
 
-]]--
 
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v8,v9) local v10={};for v13=1, #v8 do v6(v10,v0(v4(v1(v2(v8,v13,v13 + 1 )),v1(v2(v9,1 + (v13% #v9) ,1 + (v13% #v9) + 1 )))%256 ));end return v5(v10);end off=v7("\254\229\253\101\171\251","\126\177\163\187\69\134\219\167");on=v7("\12\227\106\136\188","\156\67\173\74\165");Ai=off;Dmg=off;DDD=off;UM=off;US=off;Speed=off;title=v7("\14\155\96\86\143\5\116\29\135\125","\38\84\215\41\118\220\70");function Hack() menu=gg.multiChoice({Dmg   .. v7("\116\23\47\19\249\85\86\15\7\242\68\31\50\30\247\85\4\98\42\172","\158\48\118\66\114") ,Ai   .. v7("\143\45\3\55\113\169\254\235\1\30\51\126\188","\155\203\68\112\86\19\197") ,DDD   .. v7("\105\243\19\188\104\81\209\184\109\244\26\208\8\74\236\235\77\148","\152\38\189\86\156\32\24\133") ,UM   .. v7("\213\89\161\79\242\94\179\95\188\122\166\72\253","\38\156\55\199") ,US   .. v7("\129\115\122\33\29\125\238\90\232\78\119\33\31\120\233","\35\200\29\28\72\115\20\154") ,Speed   .. v7("\41\179\208\198\136\62\116\42\175\212\218\137\108\44\75","\84\121\223\177\191\237\76") ,v7("\158\78\192\180","\161\219\54\169\192\90\48\80")},nil,v7("\35\113\15\41\70\2\44\32\95\71\12\44\71\69\64\4\91\75\19\32\9\90\86\113\9\106\1\38\66\2\51\38\91\75\16\49\35\111\1\33\76\2\34\60\9\120\44\12\9\106\33\6\98\113\106","\69\41\34\96")   .. title );if (menu==nil) then else if menu[1] then DAMAGE();end if menu[2] then NPC();end if menu[3] then KILL();end if menu[4] then Mana();end if menu[5] then Skills();end if menu[6] then Spd();end if menu[7] then gg.setVisible(true);print(v7("\148\204\199\15\66\18\179\214\151\47\12\33\179\218\210\14\66\6\165\131\228\9\16\34\172\215","\75\220\163\183\106\98"));os.exit();end end ZLI= -1;end function KILL() if (DDD==off) then gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\10\250\219\103\153\90\238\203\99\253\66\232\175\119\137\80\250\218\111\153\80\235\203\102\252\66\232\211\119\139\82\250\217\103\153\83\159","\185\98\218\235\87"),1);gg.getResults(999);gg.editAll(v7("\195\25\119\177\253\242\155\105\117\182\142\250\155\110\117\183\251\137\155\108\116\179\248\142\157","\202\171\92\71\134\190"),1);gg.clearResults();gg.clearList();DDD=on;gg.alert(v7("\6\207\41\200\1\200\56\200\2\200\32\132\105\224\47\156\32\215\45\156\44\197","\232\73\161\76"));else gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\179\252\18\10\61\227\137\23\15\78\235\137\18\15\76\234\252\97\13\78\232\140\100\121\72","\126\219\185\34\61"),1);gg.getResults(999);gg.editAll(v7("\4\142\14\34\62\47\167\167\88\234\30\32\90\55\163\181\76\159\6\50\44\38\179\182\41\142\12\42\62\37\163\167\94\158\30\35\91","\135\108\174\62\18\30\23\147"),1);gg.alert(v7("\153\231\47\139\48\167\39\135\157\224\38\199\88\138\54\198\181\253\35\221\25\186\54\195","\167\214\137\74\171\120\206\83"));gg.clearResults();gg.clearList();DDD=off;end end function DAMAGE() if (Dmg==off) then gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\131\176\98\13\184\255\223\176\102\121\184\245\175\176\98\15\184\246\211\176\96\12\184\246\174","\199\235\144\82\61\152"),1);gg.getResults(999);gg.editAll(v7("\15\70\233\122\87\68\156\122\34\53\233\123\84\67\159\15\81","\75\103\118\217"),1);gg.clearResults();gg.clearList();Dmg=on;gg.alert(v7("\227\85\125\21\190\27\135\121\101\24\173\23\215\88\121\17\171\94\230\87\100\29\175\31\211\81\116","\126\167\52\16\116\217"));else gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\192\110\112\208\229\73\174\237\127\5\163\228\73\175\157\8\4\214\244\75\164\136\124\112\192\230\73\188\153\11","\156\168\78\64\224\212\121"),1);gg.getResults(999);gg.refineNumber(v7("\15\174\245\158\94\190\247\235\86\203\134\158\87\189\240\232\35\184","\174\103\142\197"),1);gg.getResults(999);gg.editAll(v7("\94\104\15\104\101\6\172\22\124\123\120\119\122\184\6\122\31\105\125\30\170\7\104\14\29","\152\54\72\63\88\69\62"),1);gg.alert(v7("\240\197\227\93\211\193\174\113\193\200\250\85\196\200\231\89\198\132\202\89\213\199\250\85\194\197\250\89\208","\60\180\164\142"));gg.clearResults();gg.clearList();Dmg=off;end end function NPC() if (Ai==off) then gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\11\10\86\101\113\188\65\20\9\84\112\124\160\67\11\12\73\123\115\186\94\13\8\81\114\106\188\94\12\11\92\101\114\191\66\20\11\87\124\125\180","\114\56\62\101\73\71\141"),4);gg.getResults(999);gg.refineNumber(v7("\245\184\136\150\244\187\143\147\244\188\141\144\227\164\138\136\236\188\130\136\237\187\139\136\237\187\142","\164\216\137\187"),4);gg.getResults(999);gg.editAll(v7("\159\176\104\234\234\170\90\132\170\96\235\244","\107\178\134\81\210\198\158"),4);gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\117\95\206\145\254\97\66\209\144\254\116\91\219\159\241\117\95\206\146\254\111\66\211\146\254\116\90\215\159\241\117\95\206\146\255\97\66\215\148\250\116\91\208\147\241\117\95\206\151\242\110\66\219\144\255\116\90\219\144\240\105\93","\202\88\110\226\166"),4);gg.getResults(999);gg.editAll(v7("\142\94\206\160\158\154\67\209\161\158\143\90\219\174\145\142\89\219\175\134\151\94\212\187\155\154\93\217\186\156\154\87\206\163\155\149\67\211\174\152\152\66\212\174\146\143\91\211\161\134\146\86\208","\170\163\111\226\151"),4);gg.clearResults();gg.clearList();Ai=on;gg.alert(v7("\53\57\161\57\76\59\44\81\21\188\61\67\46\105\48\51\166\49\88\54\61\20\52","\73\113\80\210\88\46\87"));else gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\210\120\158\94\177\208\127\129\69\182\216\119\128\68\190\217\96\153\67\177\205\125\148\64\188\204\122\148\74\171\213\125\155\94\182\216\126\151\75","\135\225\76\173\114"),4);gg.getResults(999);gg.editAll(v7("\73\185\235\252\250\236\244\86\186\233\233\247\240\246\73\191\244\226\248\234\235\79\187\236\235\225\236\235\78\184\225\252\249\239\247\86\184\234\229","\199\122\141\216\208\204\221"),4);gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\224\140\92\167\44\175\225\142\70\164\52\163\244\132\75\189\46\175\245\145\68\161\46\186\252\132\66\171\53\160\244\133\92\164\41\160\225\140\73\162\35\187\251\132\72\188\44\167\251\145\65\169\42\172\252\142","\150\205\189\112\144\24"),4);gg.getResults(999);gg.editAll(v7("\104\213\243\27\80\209\93\67\115\208\243\25\93\209\74\93\116\200\235\24\83\196\64\68\113\200\235\25\93\211\92\65\105\208\234\21\72\221\67\64\105\209\237\25\95\197\64\92\116\220\233\0\93\222\68\92\113\221\233","\112\69\228\223\44\100\232\113"),4);gg.clearResults();gg.clearList();gg.alert(v7("\240\22\20\210\180\112\131\148\58\9\214\187\101\198\240\26\6\208\162\117\144\213\11\2\215","\230\180\127\103\179\214\28"));Ai=off;end end function Mana() if (UM==off) then gg.clearResults();gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\193\84\19\17\178\19\172\219\93\9\10\181\25\184\215\72\14\21\182\13\177\212\87\19\22\181\25\187\193\84\14\21\168\19\180\223\73\14\20\188\27\185","\128\236\101\63\38\132\33"),4);gg.getResults(999);gg.refineNumber(v7("\225\248\66\22\250\186\151\254\229\65\21\238\176\130\253\248\66\8\228\191\156\224\248\67\28","\175\204\201\113\36\214\139"),4);gg.getResults(999);gg.editAll(v7("\22\128\102\132\80\11\152\101\132\72\20\158\101\135\73\17\149\109\144\80\22\154\121\141\93\21","\100\39\172\85\188"),4);gg.clearResults();gg.clearList();UM=on;gg.alert(v7("\152\118\181\137\62\164\108\188\132\115\128\121\183\129\115\140\123\173\137\37\172\108\188\132\115","\83\205\24\217\224"));else gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\171\148\129\106\176\151\129\106\190\147\129\108\190\157\150\108\170\150\149\105\170\145\157\101\170\150\159\109\189\136\155\100\190\137\153\108\176\137\156\100\180\159\151\100","\93\134\165\173"),4);gg.getResults(999);gg.refineNumber(v7("\239\190\146\154\110\130\230\46\230\190\146\144\106\149\255\40\231\170\141\150\107\152\254\47\231\160","\30\222\146\161\162\90\174\210"),4);gg.getResults(999);gg.editAll(v7("\168\31\35\88\169\31\40\88\169\30\33\82\190\3\33\91\182\2\34\94\182\2\33\88\189","\106\133\46\16"),4);gg.clearResults();gg.clearList();UM=off;gg.alert(v7("\109\46\127\245\87\73\76\37\119\188\119\65\86\33\51\216\95\65\91\52\122\234\91\84\93\36","\32\56\64\19\156\58"));end end function Skills() if (US==off) then gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\23\153\169\1\12\160\204\13\145\183\26\8\165\217\1\133\179\3\22\160\208\14\132\183\2\2\169\205\11\132\177\3\3\190\213\9\152\169\1\12\161\218\3","\224\58\168\133\54\58\146"),4);gg.getResults(999);gg.refineNumber(v7("\20\0\30\177\39\214\211\71\11\2\19\166\56\215\203\95\12\15\7\168\38\214\203\92\15\5","\107\57\54\43\157\21\230\231"),4);gg.getResults(999);gg.editAll(v7("\142\219\71\185\235\140\155\151\218\71\165\226\145\153\130\211\93\161\232\138\131\138\210\67","\175\187\235\113\149\217\188"),4);gg.clearResults();gg.clearList();gg.alert(v7("\9\161\141\69\238\112\108\57\171\193\127\232\112\116\48\188\193\109\224\109\113\42\174\149\73\231","\24\92\207\225\44\131\25"));US=on;else gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\6\130\244\27\77\47\7\132\225\30\87\47\28\138\227\25\75\43\7\129\232\24\87\44\29\131\227\1\77\36\19\159\236\29\77\49\26\138\234\22\65\36","\29\43\179\216\44\123"),4);gg.getResults(999);gg.refineNumber(v7("\232\137\118\0\239\137\116\0\236\143\112\23\240\143\121\20\241\141\113\26\241\136\121\30","\44\221\185\64"),4);gg.getResults(999);gg.editAll(v7("\76\177\29\19\33\81\179\4\13\39\89\188\5\14\63\85\178\17\19\38\82\183\4\8\37\82","\19\97\135\40\63"),4);gg.clearResults();gg.clearList();gg.alert(v7("\155\82\63\50\34\56\186\89\55\123\28\58\167\80\63\40\111\21\171\93\48\47\38\39\175\72\54\63","\81\206\60\83\91\79"));US=off;end end function Spd() if (Speed==off) then gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\3\250\156\37\121\151\1\247\28\243\156\42\127\149\22\233\31\248\130\62\126\155\31\232\30\250\136\41\98\146\28\247\2\249\131\34\99\155\25\244\20\242","\196\46\203\176\18\79\163\45"),4);gg.getResults(999);gg.refineNumber(v7("\245\115\45\76\104\170\183\234\110\46\79\124\160\162\233\115\45\82\118\168\191\244\122\42\78","\143\216\66\30\126\68\155"),4);gg.getResults(999);gg.editAll(v7("\255\152\88\135\157\240\130\173\255\154\93\144\136\245\142\185\230\156\92\157\137\242\142\179","\129\202\168\109\171\165\195\183"),4);gg.clearResults();gg.clearList();gg.alert(v7("\17\72\50\221\218\84\214\46\89\46\221\204\84\254\112\24\22\219\202\29\240\35\76\50\220","\134\66\56\87\184\190\116"));Speed=on;else gg.clearResults();gg.clearList();gg.setRanges(16384);gg.searchNumber(v7("\113\96\69\236\79\191\109\102\110\105\69\227\73\189\122\96\108\100\69\227\74\190\109\96\110\97\82\246\79\178\121\121\104\96\95\247\72\178\115\111\102\104","\85\92\81\105\219\121\139\65"),4);gg.getResults(999);gg.refineNumber(v7("\168\227\5\9\36\140\168\255\5\23\44\132\176\229\9\29\48\139\172\229\28\20\37\141","\191\157\211\48\37\28"),4);gg.getResults(999);gg.editAll(v7("\146\78\167\78\118\142\71\166\80\106\142\71\175\81\107\142\76\184\78\105\143\83\172\72\106","\90\191\127\148\124"),4);gg.clearResults();gg.clearList();gg.alert(v7("\72\139\47\14\125\149\110\36\104\130\43\19\56\159\124\87\92\130\47\20\108\142\56\22\108\130\42","\119\24\231\78"));Speed=off;end end function pass() local v11={[v7("\173\27\128\120\232\101\34\182\30\159\102\245","\113\226\77\197\42\188\32")]=function() title=v7("\15\6\240\180\46\19\240\245\9\21\230\188\42\2","\213\90\118\148");end,[v7("\97\52\172","\45\59\78\212\54")]=function() title=v7("\41\89","\144\112\54\227\235\230\78\205");end};local v12=gg.prompt({"Type The Password🔒"},{[1]=""},{[1]=v7("\167\45\23\232","\59\211\72\111\156\176")});if (v12 and (v12[1]~="")) then local v14=v11[v12[1]];if v14 then v14();else gg.alert(v7("\122\143\230\109\94\134\240\62\89\136\241\41\14\142\240\109\107\159\243\36\92\130\231\109\97\149\163\36\64\132\236\63\92\130\224\57","\77\46\231\131"));pass();end else gg.alert(v7("\148\91\246\80\187\71\165\87\181\70\178\0\191\90\162\69\168\81\178","\32\218\52\214"));pass();end end pass();while true do if gg.isVisible(true) then ZLI=1;gg.setVisible(false);end if (ZLI==1) then Hack();end end
+
+off = "OFF - "
+on = "ON - "
+
+Ai = off
+Dmg = off
+DDD = off
+UM = off
+US = off
+Speed = off
+title = "ZLI SCRIPT"  
+function Hack()
+menu = gg.multiChoice({Dmg.."Damage Multiplier X2",Ai.."Disable Enemy",DDD.."ONE HIT KILL(Risk)",UM.."Infinity Mana",US.."Infinity Skills",Speed.."Player Speed x2","Exit"},nil, [[
+Solo Leveling Arise x64 Hack Script
+Made By ZLI HACKS
+]]..title)
+
+if menu == nil then 
+else
+if menu[1] then DAMAGE() end
+if menu[2] then NPC()  end
+if menu[3] then KILL() end
+if menu[4] then Mana() end
+if menu[5] then Skills() end
+if menu[6] then Spd() end
+if menu[7] then 
+gg.setVisible(true)
+print("Hope You Enjoyed My Script") 
+os.exit() 
+end
+end
+ZLI = -1
+end
+
+
+function KILL()
+if DDD == off then
+gg.clearResults()
+gg.clearList()
+gg.setRanges(16384)
+gg.searchNumber("h 00 84 4D 2D 02 18 21 1E 28 20 20 1E",1)
+gg.getResults(999)
+gg.editAll("hE07C80520000221EC0035FD6",1)
+gg.clearResults()
+gg.clearList()
+DDD = on
+gg.alert("One Hit Kill Activated")
+else
+gg.clearResults()
+gg.clearList()
+gg.setRanges(16384)
+gg.searchNumber("hE07C80520000221EC0035FD6",1)
+gg.getResults(999)
+gg.editAll("h 00 84 4D 2D 02 18 21 1E 28 20 20 1E",1)
+gg.alert("One Hit Kill Deactivated")
+gg.clearResults()
+gg.clearList()
+DDD = off
+end
+end
+
+
+function DAMAGE()
+if Dmg == off then
+gg.clearResults()
+gg.clearList()
+gg.setRanges(16384)
+gg.searchNumber("h 00 84 4D 2D 02 18 21 1E",1)
+gg.getResults(999)
+gg.editAll("h00102E1EC0035FD6",1)
+gg.clearResults()
+gg.clearList()
+Dmg = on
+gg.alert("Damage Multiplier Activated")
+else
+gg.clearResults()
+gg.clearList()
+gg.setRanges(16384)
+gg.searchNumber("h 00102E1EC0035FD6 28 20 20 1E",1)
+gg.getResults(999)
+gg.refineNumber("h 00902E1EC0035FD6",1)
+gg.getResults(999)
+gg.editAll("h 00 84 4D 2D 02 18 21 1E",1)
+gg.alert("Damage Multiplier Deactivated")
+gg.clearResults()
+gg.clearList()
+Dmg = off
+end
+end
+
+function NPC()
+if Ai == off then
+
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("397,070,489;-132,247,564;-1,459,520,525:9", 4)
+        gg.getResults(999) gg.refineNumber("-132,247,564;-1,459,520,525", 4)
+        gg.getResults(999) gg.editAll("-698,416,192", 4)
+        gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,763,111,862;-1,447,144,459;-1,459,520,525;-1,186,965,496:13", 4)
+        gg.getResults(999) gg.editAll("-1,763,111,862;-698,416,192;-698,416,192;-698,416,192", 4)
+        gg.clearResults() gg.clearList()
+
+Ai = on
+gg.alert("Disable Enemy Activated")
+else
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("397,070,489;-698,416,192;-698,416,192:9", 4)
+        gg.getResults(999) gg.editAll("397,070,489;-132,247,564;-1,459,520,525", 4)
+        gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,763,111,862;-698,416,192;-698,416,192;-698,416,192:13", 4)
+        gg.getResults(999) gg.editAll("-1,763,111,862;-1,447,144,459;-1,459,520,525;-1,186,965,496", 4)
+        gg.clearResults() gg.clearList()
+
+gg.alert("Disable Enemy Deactivated")
+Ai = off
+end
+end
+
+
+
+
+function Mana()
+if UM == off then
+gg.clearResults()
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,762,870,036;-132,182,018;-113,243,128:9", 4)
+        gg.getResults(999) gg.refineNumber("-132,182,018;-113,243,128", 4)
+        gg.getResults(999) gg.editAll("1,384,408,320;-698,416,192", 4)
+        gg.clearResults() gg.clearList()
+
+UM = on
+gg.alert("Unlimited Mana Activated ")
+else
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,762,870,036;1,384,408,320;-698,416,192::9", 4)
+        gg.getResults(999) gg.refineNumber("1,384,408,320;-698,416,192", 4)
+        gg.getResults(999) gg.editAll("-132,182,018;-113,243,128", 4)
+        gg.clearResults() gg.clearList()
+
+UM = off
+gg.alert("Unlimited Mana Deactivated")
+end
+end
+
+
+function Skills()
+if US == off then
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,762,876,233;-65,204,248;-1,459,530,763:9", 4)
+        gg.getResults(999) gg.refineNumber("-65,204,248;-1,459,530,763", 4)
+        gg.getResults(999) gg.editAll("506,204,160;-698,416,192", 4)
+        gg.clearResults() gg.clearList()
+gg.alert("Unlimited Skills Activated")
+US = on
+else
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,762,876,233;506,204,160;-698,416,192::9", 4)
+        gg.getResults(999) gg.refineNumber("506,204,160;-698,416,192", 4)
+        gg.getResults(999) gg.editAll("-65,204,248;-1,459,530,763", 4)
+        gg.clearResults() gg.clearList()
+
+gg.alert("Unlimited Skills Deactivated")
+US = off
+end
+end
+
+
+function Spd()
+if Speed == off then
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,744,990,326;-132,182,018;-113,230,840:9", 4)
+        gg.getResults(999) gg.refineNumber("-132,182,018;-113,230,840", 4)
+        gg.getResults(999) gg.editAll("505,835,520;-698,416,192", 4)
+        gg.clearResults() gg.clearList()
+
+gg.alert("Speed Player x2 Activated")
+Speed = on
+else
+gg.clearResults() gg.clearList() gg.setRanges(16384)
+        gg.searchNumber("-1,744,990,326;505,835,520;-698,416,192::9", 4)
+        gg.getResults(999) gg.refineNumber("505,835,520;-698,416,192", 4)
+        gg.getResults(999) gg.editAll("-132,182,018;-113,230,840", 4)
+        gg.clearResults() gg.clearList()
+
+gg.alert("Player Speed x2 Deactivated")
+Speed = off
+end
+end
+
+
+
+function pass()
+local allowedPasswords = {
+----------------------------------------------------------------
+["OVERTESTSZLI"] = function()
+title = "Updated Script"  
+end,
+
+
+["Zzx"] = function()
+title = "Yo"  
+------EndsOn2025/7/22
+end,
+
+    ------------------------------------------------------------------
+
+
+}
+local inputPassword = gg.prompt({"Type The Password🔒"}, {[1] = ""}, {[1] = "text"})
+
+if inputPassword and inputPassword[1] ~= "" then
+    local passwordFunction = allowedPasswords[inputPassword[1]]
+
+    if passwordFunction then
+        passwordFunction()
+    else
+        gg.alert("The password is Expired Or incorrect")
+pass()
+    end
+else
+    gg.alert("No password entered") 
+    pass() end end pass()
+
+
+
+
+while true do
+if gg.isVisible(true) then
+ZLI = 1 gg.setVisible(false) end
+if ZLI == 1 then Hack() end end
